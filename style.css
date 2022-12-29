@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* its some good practice to write these things beforehand */
+:root{
+    --primary-text-color: #183b56 ;
+    --seconddary-text-color: #577592 ;
+    --accent-color: #2294ed ;
+    --accent-color-dark: #1d69a3 ;
+    --padding-inline-section: 20px ;
+}
+
+body{
+    /* font family ko poppins pr set kr denge aur poppins nhi mila to fall back to sans-serif */
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+    /* this means that using variable fx set color to primary text color */
+}
+
+/* lets give some styling to the headings */
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+/* not about paragraphs --> lets change the font color and font */
+p{
+    font-family: 'Roboto' , sans-serif;
+    font-size: 1.25rem;
+    color: var(--seconddary-text-color);
+    line-height: 1.8rem;
+}
+
+/* and now about anchor tag */
+/* yaad hain anchor tag mein by-default underline aa jaata hain links mein usko hata dete hain wo cheap lgta hain to ye hoga using text-decoration */
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+    /* generally kya hota hain ki lists mein circle hota hain saath mein name ke so usko hatane k lie ye kia gya hain */
+}
+
+/* so uppar likhe hue code aise hain jo almost saare hi website mein hm krte hain --> so its a good practice to write them before hand taaki inko baar baar na likhna pdhe and agar kuch change krna ho to ek baar krne se hi hr jagah change ho jaae */
+
+/* Utilities Classes */
+
+.small-bold-text{
+    font-size: 0.85rem;
+    font-weight: 200;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/* top-banner */
+
+.top-banner{
+    background-color: #F06292;
+    background-image: url(assets/top-banner.png);
+    background-size: 300px;
+}
+
+.banner-text{
+    color: white;
+    padding: 15px 30px; 
+    /* iska mtlb top and bottom se 15px and left aur right se 30px */
+
+    text-align: center;
+}
+
+/* comma can be used to separate two class names when we want to apply same styling to different classes */
+
+.hover-links{
+    color: var(--primary-text-color);
+    transition: 0.3s ease-in-out;
+}
+
+.hover-links:hover{
+    color: var(--accent-color);
+}
+
+/* since only two types of button are used in the whole website we can define them in utility class */
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    /* important hata kr dekh lo uska use smjh aa jaaega --> changes honge bcz uppar hmne anchor tag k lie properties define kr di thi so usko avoid krne k lie important use hua */
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--seconddary-text-color);
+    transition: 0.3s;
+}
+
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-button{
+    border: 0.5px solid var(--seconddary-text-color);
+    border-radius: 6px;
+    /* border radius shows the curvature round the corners*/
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.3s ease-in-out;
+}
+
+.secondary-button:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+
+/* nav-bar */
+
+.main-nav{
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.company-logo img{
+    width: 200px;
+}
+
+.nav-links{
+    flex-basis: 730px;
+}
+
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+}
+
+/* header-section */
+
+header{
+    padding: 50px var(--padding-inline-section) 0px;
+}
+
+.header-section{
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left h1{
+    margin-top: 20px;
+}
+
+.header-right img{
+    width: 500px;
+}
+
+/* companies-section */
+
+.companies-section{
+    margin-bottom: 30px;
+}
+
+.companies-header{
+    text-align: center;
+    margin-block: 30px;
+    color: var(--primary-text-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.logos{
+    justify-content: space-between;
+    /* when we would decrease the screen size flex-wrap will make the logo come down by each other */
+    flex-wrap: wrap;
+}
+
+.logo{
+    height: 46px;
+}
+
+/* features-section */
+
+.feature-section{
+    padding: 60px var(--padding-inline-section);
+}
+
+.feature-header{
+    text-align: center;
+}
+
+.feature-heading-text{
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.fa-solid{
+    color: #2294ed;
+}
+
+.feature-area{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+    background-image: url(/assets/feature-back.png);
+}
+
+.feature-card{
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.feature-card img{
+    width: 12%;
+}
+
+/* big-feature-section */
+
+.big-feature-section{
+    padding: 15px var(--padding-inline-section) ;
+}
+
+.big-feature-container{
+    gap: 30px;
+}
+
+.big-feature-img img{
+    width: 100%;
+}
+
+.big-feature-desc{
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* examples-section */
+
+.example-section{
+    padding: 60px var(--padding-inline-section) 20px;
+}
+
+.example-header{
+    text-align: center;
+}
+
+.example-heading-text{
+    margin-bottom: 15px;
+}
+
+.example-area{
+    justify-content: space-between;
+    padding: 30px var(--padding-inline-section) ;
+}
+
+.example-card{
+    width: 23%;
+    /* why 23% bcz we have to accomodate 4 cards and need to have some space between them --> so less than 25% needed for each card */
+    position: relative;
+    min-height: 300px;
+    background: black;
+    transition: 0.3s ease-in-out;
+}
+
+.example-card:hover{
+    box-shadow: 0 0 30px #8888;
+}
+
+.card-text{
+    color: white;
+    position: absolute;
+    /* this will make it more adjustable wrt example card class*/
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+/* cta-section */
+
+footer{
+    padding: 80px;
+    background-color: #ebf2fa;
+}
+
+.cta-section{
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: #183b56;
+}
+
+.cta-area{
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.cta-area p{
+    color: white;
+    margin-top: 20px;
+}
+
+/* footer section */
+.footer-columns{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-container{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-hover-link{
+    color: var(--seconddary-text-color);
+}
+
+/* sub-footer section */
+
+.sub-footer{
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+.subfooter-container{
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
