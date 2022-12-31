@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usability Hub</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css"> 
     <script src="https://kit.fontawesome.com/0de0c57aa6.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png" >
+    <!-- media queries css ; to make website responsive -->
 </head>
 <body>
 
@@ -33,18 +35,23 @@
             </a>
 
             <!-- other links section -->
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <!-- shortcut : ul>li*6>a , this created 6 lis and with anchor tag -->
                     <!-- try this shortcut alt+shift+right click to multiple cursor on multiple lines -->
-                    <li><a href="https://usabilityhub.com/product" class="hover-links">Product</a></li>
-                    <li><a href="https://usabilityhub.com/customers" class="hover-links">Customers</a></li>
-                    <li><a href="https://usabilityhub.com/pricing" class="hover-links">Pricing</a></li>
-                    <li><a href="https://usabilityhub.com/usability-testing-examples" class="hover-links">Resources</a></li>
-                    <li><a href="https://app.usabilityhub.com/users/sign_in" class="hover-links secondary-button">Sign in</a></li>
-                    <li><a href="https://app.usabilityhub.com/users/sign_up" class="hover-links primary-button">Sign up</a></li>
+                    <li><a href="#" class="hover-links">Product</a></li>
+                    <li><a href="#" class="hover-links">Customers</a></li>
+                    <li><a href="#" class="hover-links">Pricing</a></li>
+                    <li><a href="#" class="hover-links">Resources</a></li>
+                    <li><a href="#" class="hover-links secondary-button">Sign in</a></li>
+                    <li><a href="#" class="hover-links primary-button">Sign up</a></li>
                 </ul>
             </div>
+
+            <!-- hamburger icon ; making responsive -->
+            <a href="#" class="nav-toggle hover-links" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -55,7 +62,7 @@
             <div class="header-left">
                 <h1>Design Confidently.</h1><br>
                 <p>UsabilityHub is a remote user research platform that takes the guesswork out of design decisions by validating them with real users.</p><br>
-                <a href="https://app.usabilityhub.com/users/sign_up" class="primary-button">Get started</a>
+                <a href="#" class="primary-button">Get started</a>
             </div>
             <div class="header-right">
                 <img src="/assets/header-right.png" alt="⛔ Check your connection">
@@ -71,7 +78,7 @@
                 The world’s best companies rely on UsabilityHub to make better design decisions.
             </div>
 
-            <div class="logos flex">
+            <div class="logos-section flex">
                 <img class="logo" src="/assets/comp1.png" alt="">
                 <img class="logo" src="/assets/comp2.png" alt="">
                 <img class="logo" src="/assets/comp3.png" alt="">
@@ -90,7 +97,7 @@
             <!-- first part containing para and button -->
             <div class="feature-header">
                 <h2 class="feature-heading-text">Your user research Swiss Army knife</h2>
-                <a href="https://usabilityhub.com/product" class="secondary-button">See all feature   <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="secondary-button">See all feature   <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             
             <!-- second part containing all the features -->
@@ -140,7 +147,7 @@
         </div>
     </section>
 
-    <!-- more features section -->
+    <!-- big features section -->
 
     <section class="big-feature-section">
         <div class="container flex big-feature-container">
@@ -157,7 +164,8 @@
     </section>
 
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container special-reverse-big-feature">
+            <!-- isme hmne special class isilie lgayi bcz responsive banane mein ease rha bcz isme direction reverse thi img aur text ki to isilie isko special handle krna pdha -->
             <div class="big-feature-desc flex">
                 <h4>Optimisation for</h4>
                 <h3>Marketers</h3>
@@ -191,7 +199,7 @@
         <div class="container">
             <div class="example-header">
                 <h2 class="example-heading-text">One platform, endless possibilities</h2>
-                <a href="https://usabilityhub.com/product" class="secondary-button">See more examples   <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="secondary-button">See more examples   <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
@@ -221,7 +229,7 @@
         <div class="container cta-area flex">
             <h2>Start testing today</h2>
             <p>Take the guesswork out of design decisions</p>
-            <a href="https://app.usabilityhub.com/users/sign_up" class="primary-button">
+            <a href="#" class="primary-button">
                 Get started
             </a>
         </div>
@@ -267,6 +275,8 @@
         </div>
     </footer>
 
+    <!-- sub-footer -->
+
     <div class="sub-footer">
         <div class="container flex subfooter-container">
             <a href="#" class="hover-links">Privacy policy</a>
@@ -278,6 +288,17 @@
             <a href="https://github.com/error-404xdhruv" class="hover-links"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
+
+    <!-- this java script is here to toggle the nav-button which is there in the nav-bar , is time mujhe itna smjh nhi aaya but thoda bahut aaya tha -->
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle') ;
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () =>{
+            navLinks.classList.toggle('active') ;
+        })
+    </script>
 
 </body>
 </html>
