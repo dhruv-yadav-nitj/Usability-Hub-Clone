@@ -22,4 +22,4 @@ To run the website locally, clone the repository and open the `index.html` file 
 - Website clone created by dhruv.
 
 ## Website Link
-<a href="https://dhruv-yadav-nitj.github.io/clone-usablility-hub/"> Click Me </a>
+Website is live <a href="https://dhruv-yadav-nitj.github.io/clone-usablility-hub/">here</a>.
